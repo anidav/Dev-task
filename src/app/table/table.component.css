@@ -1,0 +1,33 @@
+.add {
+    color: white;
+    text-decoration: none;
+    background-color: brown;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.table_div {
+    display: flex;
+    justify-content: center;
+}
+
+.table tr, td, th {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.edit {
+    color: white;
+    background-color: grey;
+    text-align: center;    
+    cursor: pointer;
+}
+.edit a {
+    text-decoration: none;
+    color: white;
+}

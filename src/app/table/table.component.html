@@ -1,0 +1,33 @@
+<div>
+  <a routerLink="/modal" class="add">Add new</a>
+</div>
+<div class="table_div">
+  <table class="table">
+    <caption><h3>Existing locations</h3></caption>
+    <thead>
+      <tr>
+        <th>Headings</th>
+        <th>Address</th>
+        <th>Area Size</th>
+        <th>Points Locations</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody> 
+        <tr *ngFor = "let item of location">
+            <td>{{location.headings}}</td>
+            <td>{{location.address}}</td>
+            <td>{{location.area}}</td>
+            <td>{{location.points}}</td>
+            
+        </tr>        
+        <tr *ngFor="let item of empty">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="edit"><a routerLink="modal">Edit</a></td>
+        </tr>    
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,42 @@
+agm-map {
+    height: 400px;
+}
+.modal {
+    display: flex;
+    color:white;  
+    width:80%;
+    background-color: gray;
+}
+
+.map {
+    width: 70%;
+} 
+
+.options {
+    /* display: flex;
+    flex-direction: column; */
+    flex-wrap: wrap;
+    text-align: center;
+    width: 30%;
+}
+
+.search {
+    width: 80%;
+}
+
+.confirm, .reset {
+    border-radius: 5px;
+    outline: none;
+    width: 70%;
+    cursor: pointer;
+    color: white;
+    padding: 5px;    
+    margin: 20px;
+}
+.reset {
+    background-color: rgb(179, 110, 110);
+}
+
+.confirm {
+    background-color: transparent;
+}
