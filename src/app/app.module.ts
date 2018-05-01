@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
@@ -17,9 +18,12 @@ import { AppRoutingModule } from './/app-routing.module';
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyByKGT0n2-aD0m9XuVoJoa7tsLjltoBhU0'
+      apiKey: 'AIzaSyByKGT0n2-aD0m9XuVoJoa7tsLjltoBhU0',
+      libraries: ["places"]
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

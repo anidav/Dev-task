@@ -13,8 +13,6 @@ agm-map {
 } 
 
 .options {
-    /* display: flex;
-    flex-direction: column; */
     flex-wrap: wrap;
     text-align: center;
     width: 30%;
@@ -24,7 +22,7 @@ agm-map {
     width: 80%;
 }
 
-.confirm, .reset {
+.confirm, .reset, .back {
     border-radius: 5px;
     outline: none;
     width: 70%;
@@ -33,7 +31,7 @@ agm-map {
     padding: 5px;    
     margin: 20px;
 }
-.reset {
+.reset, .back {
     background-color: rgb(179, 110, 110);
 }
 

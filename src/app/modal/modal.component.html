@@ -1,9 +1,9 @@
 <div class="modal"> 
   <div class="map">
-    <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onChoseLocation($event)">
+    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
       <agm-marker
-        [latitude]="lat"
-        [longitude]="lng"
+        [latitude]="latitude"
+        [longitude]="longitude"
         *ngIf="locationChosen"
         >
       </agm-marker>
@@ -12,8 +12,12 @@
   <div class="options">
     <h3>Map selection tools</h3>
     Address
-    <input type="search" placeholder="Search" class="search">
+    <input placeholder="Search..." autocorrect="off" 
+      autocapitalize="off" spellcheck="off"
+      type="text" #search [formControl]="searchControl"
+    >
     <a routerLink=""><input type="submit" class="confirm" value="Confirm selection"></a>
     <button class="reset">Reset selection</button>  
+    <a routerLink=""><button class="back">Back</button></a>
   </div> 
 </div>
