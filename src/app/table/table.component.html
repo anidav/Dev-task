@@ -14,20 +14,22 @@
       </tr>
     </thead>
     <tbody> 
-        <tr *ngFor = "let item of location">
-            <td>{{location.headings}}</td>
-            <td>{{location.address}}</td>
-            <td>{{location.area}}</td>
-            <td>{{location.points}}</td>
+        <!-- <tr *ngFor = "let item of location">
+            <td>{{location}}</td>
+            <td>{{location}}</td>
+            <td>{{location}}</td>
+            <td>{{location}}</td>
             
-        </tr>        
-        <tr *ngFor="let item of empty">
+        </tr>         -->
+        <tr *ngFor="let item of empty" id="tr">
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td class="edit"><a routerLink="modal">Edit</a></td>
+            <td class="edit">Edit</td>
         </tr>    
     </tbody>
   </table>
 </div>
+<!-- <div id="map" style="width:400px;height:400px;background:yellow"></div> -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> -->

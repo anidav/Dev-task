@@ -1,5 +1,5 @@
 export class Location {
-    headings: string;
+    headings: number;
     address: string;
     area: number;
     points: object;

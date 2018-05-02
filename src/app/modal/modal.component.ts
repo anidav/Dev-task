@@ -5,6 +5,7 @@ import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
 import { Polygon } from '@agm/core/services/google-maps-types';
 
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -18,6 +19,7 @@ export class ModalComponent implements OnInit {
   locationChosen =false;
   public searchControl: FormControl;
   public zoom: number;
+  // points: object;
 
   constructor(
     private mapsAPILoader: MapsAPILoader,
@@ -31,8 +33,9 @@ export class ModalComponent implements OnInit {
     console.log(this.locationChosen);
     console.log(this.latitude);
     console.log(this.longitude);
+    console.log(event)
   } 
-  
+
   @ViewChild("search")
   public searchElementRef: ElementRef;  
 
@@ -70,4 +73,10 @@ export class ModalComponent implements OnInit {
       });
     }
   }
+ 
+  add= (event) => {
+    
+    console.log(event.target.value)
+  }
+  
 }

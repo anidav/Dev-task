@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../location';
+import { LocationService } from '../location.service';
 
 @Component({
   selector: 'app-table',
@@ -7,16 +8,14 @@ import { Location } from '../location';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  location: Location[] = [];
+  location: Array<Location>;
+  item: Location;
   empty = new Array(10).fill(null);
-
-  // addLocation(): void {
-  //   location.push("")
-  // }
-
-  constructor() { }
-
+  
+  constructor(private locationService: LocationService) { }
+  
   ngOnInit() {
+    
   }
 
 }

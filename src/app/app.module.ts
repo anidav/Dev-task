@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { ModalComponent } from './modal/modal.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { LocationService } from './location.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { AppRoutingModule } from './/app-routing.module';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

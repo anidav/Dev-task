@@ -4,7 +4,6 @@ import { TableComponent } from '../app/table/table.component';
 import { ModalComponent } from '../app/modal/modal.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '', component: TableComponent },
   { path: 'modal', component: ModalComponent }
 ];
