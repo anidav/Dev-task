@@ -5,7 +5,7 @@ agm-map {
     display: flex;
     color:white;  
     width:80%;
-    background-color: gray;
+    background-color: #635f5f;
 }
 
 .map {
@@ -18,7 +18,7 @@ agm-map {
     width: 30%;
 }
 
-.search {
+.search_box {
     width: 80%;
 }
 

@@ -1,6 +1,9 @@
-export class Location {
-    headings: number;
+export interface Location {
+    heading: string;
     address: string;
     area: number;
-    points: object;
+    points: {
+        latitude: number,
+        longitude: number,
+    };
 }

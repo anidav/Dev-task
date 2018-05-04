@@ -5,11 +5,8 @@ import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class LocationService {
-
+ public location: Location[] = []; 
+ 
   constructor() { }
-    getLocation(): Location[] {
-     
-      console.log("Location is ")
-      return ;
-    }
-}
+
+  }

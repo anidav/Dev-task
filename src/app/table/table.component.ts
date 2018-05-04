@@ -8,11 +8,15 @@ import { LocationService } from '../location.service';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  location: Array<Location>;
-  item: Location;
+
   empty = new Array(10).fill(null);
-  
-  constructor(private locationService: LocationService) { }
+
+  editLocation(item) {
+    console.log("lat=", item.points.latitude);
+    console.log("lng=", item.points.longitude)
+  }
+
+  constructor(public locationService: LocationService) { }
   
   ngOnInit() {
     
