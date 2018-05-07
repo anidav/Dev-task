@@ -1,12 +1,27 @@
 <div class="modal"> 
   <div class="map">
-    <agm-map [latitude]="latitude" [longitude]="longitude" [mapTypeId]="'hybrid'" (mapClick)="onChoseLocation($event)">
+    <agm-map #myMap [latitude]="latitude" [longitude]="longitude" [mapTypeId]="'hybrid'"
+      (mapClick)="onChoseLocation($event)">          
       <agm-marker
-        [latitude]="latitude"
-        [longitude]="longitude"
-        *ngIf="locationChosen"
-      >
+      [latitude]="latitude"
+      [longitude]="longitude"
+      *ngIf="locationChosen"
+      >      
+      <agm-info-window>
+        <strong>Area="$3.14*'radius'*'radius'"</strong>
+      </agm-info-window>       
       </agm-marker> 
+      <agm-circle [latitude]="latitude" [longitude]="longitude" 
+        [radius]="radius"
+        [fillColor]="'red'"
+        [circleDraggable]="true"
+        [editable]="true"       
+      >
+      </agm-circle>    
+      <!-- <agm-polygon
+        [paths] = "paths"
+      >
+      </agm-polygon>   -->
     </agm-map>    
   </div>
   <div class="options">

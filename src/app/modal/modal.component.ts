@@ -4,7 +4,10 @@ import { FormControl } from '@angular/forms';
 import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
 import { LocationService } from '../location.service';
-
+// import { LatLng, LatLngLiteral, PolyMouseEvent, PolygonOptions } from '@agm/core/services/google-maps-types';
+// import { PolygonManager } from '@agm/core/services/managers/polygon-manager';
+// import {AgmPolygon} from '@agm/core/directives/polygon';
+ 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -15,6 +18,17 @@ export class ModalComponent implements OnInit {
   latitude: number = 51.678418;
   longitude: number = 7.809007;
   locationChosen =false;
+  // paths: Array<LatLngLiteral> = [
+  //   { lat: 51.678418,  lng: 7.809007 },
+  //   { lat: 51.678418,  lng: 7.807000 },
+  //   { lat: 51.678418, lng: 7.511144 },
+  //   { lat: 51.678418, lng: 7.500000 },
+  //   { lat: 51.678418,  lng: 7.666666 }
+  // ]  
+  // fillColor: "red";
+  // visible: boolean;
+  // strokeColor: "white";
+  radius: number;
   location;
   drawingManager ; 
   public searchControl: FormControl;
@@ -30,11 +44,16 @@ export class ModalComponent implements OnInit {
     this.latitude=event.coords.lat;
     this.longitude=event.coords.lng;
     this.locationChosen=true;
+    this.radius=10000;
     console.log(this.locationChosen);
     console.log(this.latitude);
     console.log(this.longitude);
     console.log(event)
   } 
+
+//   radiusChange() {
+// console.log("changed radius=", this.radius)
+//   }
 
   @ViewChild("search")
   public searchElementRef: ElementRef;

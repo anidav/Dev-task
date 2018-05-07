@@ -19,7 +19,7 @@
           <td>{{item.address}}</td>
           <td>{{item.area}}m2</td>
           <td>lat={{item.points.latitude}} lng={{item.points.longitude}}</td>
-          <td class="edit" (click)="editLocation(item)"><a routerLink="/modal">Edit</a></td>
+          <a routerLink="/modal"><td class="edit" (click)="editLocation(item)">Edit</td></a>
       </tr>    
     </tbody>
   </table>

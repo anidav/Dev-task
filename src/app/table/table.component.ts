@@ -12,6 +12,7 @@ export class TableComponent implements OnInit {
   empty = new Array(10).fill(null);
 
   editLocation(item) {
+    
     console.log("lat=", item.points.latitude);
     console.log("lng=", item.points.longitude)
   }
